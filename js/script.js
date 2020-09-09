@@ -1,76 +1,26 @@
-var booleana = true;
-console.log(booleana);
+window.alert('Calculadora em JavaScript');
 
-booleana = false;
-console.log(booleana);
-console.log(typeof(booleana));
+var opcao = parseInt(window.prompt('Digite a operação desejada:\n1 - soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Potência'));
+var numero1 = parseFloat(window.prompt('Digite o primeiro número'));
+var numero2 = parseFloat(window.prompt('Digite o segundo número'));
+var resultado;
 
-booleana = !booleana;
-console.log(booleana);
-
-//----------------------
-
-var numero = 1;
-console.log(numero);
-console.log(typeof(numero));
-
-numero = -1;
-console.log(numero);
-console.log(typeof(numero));
-
-numero = Math.PI;
-console.log(numero);
-console.log(typeof(numero));
-
-var n1 = 10;
-var n2 = 20;
-console.log('Soma = ', n1 + n2);
-console.log('Subtração = ', n1 - n2);
-console.log('Multiplicação = ', n1 * n2);
-console.log('Divisão = ', n1 / n2);
-console.log('Potência n1 elevado a n2 = ', Math.pow(n1, n2));
-console.log('Raiz quadrada de 25 = ', Math.sqrt(25));
-
-var pi = Math.PI;
-var numeroRandomico = Math.random()*100;
-
-console.log('Número randômico até 100 : ', numeroRandomico);
-console.log('Número randômico até 100 : ', Math.floor(numeroRandomico));
-console.log('Número randômico até 100 : ', Math.trunc(numeroRandomico));
-console.log('Número randômico até 100 : ', Math.round(numeroRandomico));
-//-----------------------
-
-var texto = 'texto texto texto';
-console.log(texto);
-console.log(typeof(texto));
-
-texto = 'c';
-console.log(texto);
-console.log(typeof(texto));
-
-texto = 'texto texto texto';
-console.log(texto);
-console.log(typeof(texto));
-
-console.log(texto.toUpperCase());
-console.log(texto.toLocaleLowerCase());
-console.log(texto.trim());
-
-texto = 'texto';
-console.log(texto.startsWith('tex'));
-console.log(texto.endsWith('to'));
-
-console.log(texto.search('x'));
-console.log(texto.search('a'));
-
-console.log(texto.indexOf('x'));
-console.log(texto.indexOf('a'));
-
-console.log(texto.includes('x'));
-console.log(texto.includes('a'));
-
-console.log(texto.charAt(0));
-console.log(texto.charAt(1));
-
-console.log(texto.concat(' Texto'));
+switch(opcao){
+    case 1: resultado = numero1 + numero2;
+    window.alert('Resultado: ' + resultado);
+    break;
+    case 2: resultado = numero1 - numero2;
+    window.alert('Resultado: ' + resultado);
+    break;
+    case 3: resultado = numero1 * numero2;
+    window.alert('Resultado: ' + resultado);
+    break;
+    case 4: resultado = numero1 / numero2;
+    window.alert('Resultado: ' + resultado);
+    break;
+    case 5: resultado = Math.pow(numero1,numero2);
+    window.alert('Resultado: ' + resultado);
+    break;
+    default: window.alert('Opção Inválida');
+}
 
